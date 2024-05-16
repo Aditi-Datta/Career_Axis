@@ -1,0 +1,30 @@
+.container-top {
+    padding: 50px 30px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-evenly;
+    background-color: rgba(200, 209, 133, 0.108);
+    min-height: 85vh;
+}
+
+.heading-top {
+    margin: 0 auto;
+    line-height: 3.3rem;
+    max-width: 500px;
+    color: #000;
+    font-size: 3.1rem;
+    font-weight: bold;
+}
+.heading-top span {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, #791a80, #1369b9 );
+}
+
+.right img {
+    width : 400px;
+    
+}

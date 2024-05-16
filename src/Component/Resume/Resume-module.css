@@ -1,0 +1,93 @@
+.resumeContainer {
+    --color: #239ce2;
+    min-width: 700px;
+    max-width: 850px;
+    margin: 0 auto;
+    flex: 1.2;
+    height: fit-content;
+    min-height: 900px;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
+
+.resumeHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.resumeHeader .resumeHeading {
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.resumeHeader .resumeSubHeading {
+  color: var(--color);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.resumeHeader .resumeLinks {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-top: 20px;
+}
+
+.resumeHeader .resumeLink {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.resumeHeader .resumeLink svg {
+  color: var(--color);
+  height: 16px;
+  width: 16px;
+}
+
+.reMain {
+  display: flex;
+  gap: 30px;
+}
+
+.reCol1 {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.reCol2{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.reSection .reSectionTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  width: 100%;
+  border-bottom: 2px solid #000;
+}
+
+.reSection .reContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reSection .reContent > div {
+  border-bottom: 1px solid lightblue;
+}
+
+
+
+
