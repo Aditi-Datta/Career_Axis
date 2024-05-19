@@ -1,17 +1,32 @@
 .resumeContainer {
-    --color: #239ce2;
+    --color: #23e289;
     min-width: 700px;
     max-width: 850px;
     margin: 0 auto;
+    margin-top: 4%;
     flex: 1.2;
-    height: fit-content;
-    min-height: 900px;
+    /* height: fit-content; */
+    min-height: 950px;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 30px;
+
+    border: 3px solid #033e7a;
+  padding: 50px;
+  border-radius: 5px;
+  width: 80%;
+  height: 90%;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
 }
+
+/* .outerResume {
+  padding: 5px;
+  border: 3px solid #7a036a;
+} */
 
 .resumeHeader {
   display: flex;
@@ -61,19 +76,28 @@
   flex: 1.3;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .reCol2{
-  flex: 1;
+  flex: 1.3;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+
+
+  
+}
+
+.cv-middle-border {
+  width: 2px;
+  background-color: #2c3e50;
+  margin: 0 20px;
 }
 
 .reSection .reSectionTitle {
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: bold;
   width: 100%;
   border-bottom: 2px solid #000;
 }
@@ -81,13 +105,70 @@
 .reSection .reContent {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.reSection .reContent .reItem {
+  border-bottom: 2px dotted #5a1212;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 10px;
 }
 
 .reSection .reContent > div {
-  border-bottom: 1px solid lightblue;
+  border-bottom: 1px dotted rgb(215, 203, 218);
 }
 
+.reSection .reContent > div:last-child{
+  border-bottom: none;
+}
 
+.reContent .reTitle {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
 
+.reContent .reSubTitle {
+  font-weight: bold;
+  color: var(--color);
+  font-size: 1rem;
+}
 
+.reContent .reOverview {
+  font-size: 0.9rem;
+}
+
+.reContent .reLink {
+  display: flex;
+  gap: 5px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: var(--color);
+}
+
+.reContent .reLink svg{
+  height: 14px;
+  width: 14px;
+  color: var(--color);
+}
+
+.reContent .reDate{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.reContent .reDate svg {
+  height: 14px;
+  width: 14px;
+  color: var(--color);
+}
+
+.reContent .rePoints, .numbered{
+  padding-left: 18px;
+  font-size: 0.875rem;
+}

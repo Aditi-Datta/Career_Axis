@@ -1,22 +1,30 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Body-module.css';
 import { ArrowDown } from 'react-feather';
+import ReactToPrint from "react-to-print";
 import Editor from '../Editor/Editor';
 import Resume from '../Resume/Resume';
 
 function Body() {
   const colors =['#7787DF', '#BE6DDB', '#B37595', '#6EC8B0','#C0C46F'];
-  
+
+
+  const resumeRef = useRef();
    const sections = {
     basicInfo: "Basic Info",
     workExp: "Work Experience",
     project: "Projects",
     education: "Education",
     achievement: "Achievements",
-    summary: "Summary",
+    summary: "Career Objective",
     other: "Other",
   };
 
+
+  // const resumeRef = useRef();
+
+
+  const [activeColor, setActiveColor] = useState(colors[0]);
   const [resumeInformation, setResumeInformation] = useState({
     [sections.basicInfo]: {
       id: sections.basicInfo,
@@ -65,17 +73,39 @@ function Body() {
     {colors.map ((item) => (
       <span
       key={item}
-      style={{backgroundColor: item}}
       className='color'
-      ></span>
+      style={{ border: activeColor === item ? `2px solid black` : "" , backgroundColor: item  }}
+      onClick={() => setActiveColor(item)}
+      />
     ))}
     </div>
-    <button>Download <ArrowDown></ArrowDown> </button>
+
+
+  
+    <ReactToPrint
+    trigger={() => {
+      return (
+        <button>
+          Download <ArrowDown />
+        </button>
+      );
+    }}
+    content={() => resumeRef.current}
+  />
+
+
+    
     </div>
     <div className='editor-main'> 
     <Editor sections={sections}  information = {resumeInformation} setInformation={setResumeInformation} ></Editor>
 
-    <Resume></Resume>
+    
+    <Resume
+    ref={resumeRef}
+          sections={sections}
+          information={resumeInformation}
+          activeColor={activeColor}
+        />
 
     </div>
 
