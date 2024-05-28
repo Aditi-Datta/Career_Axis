@@ -1,0 +1,38 @@
+nav {
+    background-color: rgb(4, 21, 57);
+    padding: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  li {
+    color: white;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+.logoClass {
+  width: 40px;
+  height: 28px;
+ 
+}
+
+
+@media (min-width: 400px) {
+  .logoClass{
+    width:50px;
+  }
+  
+
+}

@@ -1,55 +1,115 @@
 .resumeContainer {
-    --color: #23e289;
-    min-width: 700px;
-    max-width: 850px;
-    margin: 0 auto;
-    margin-top: 4%;
-    flex: 1.2;
-    /* height: fit-content; */
-    min-height: 950px;
-    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
+  --color: #23e289;
+  
+  margin: 0 auto;
+  /* margin-top: 4%; */
+  
+  flex: 1.2;
+  height: fit-content;
+  min-height: 950px;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
 
-    border: 3px solid #033e7a;
-  padding: 50px;
-  border-radius: 5px;
-  width: 80%;
-  height: 90%;
-  margin: 30px auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  background-color: white;
+
+  /* border-bottom: 2px solid #0a2744; */
+  /* border: 2px solid #000; Main border color */
+  
+  /* border-style: double; */
+
+  padding-left: 3%;
+  color: #000;
+  
 }
 
-/* .outerResume {
-  padding: 5px;
-  border: 3px solid #7a036a;
-} */
+
 
 .resumeHeader {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ background-color: #0a2744;
+ color: white;
+ width: 100%;
+ /* width: 100%;
+ height: 30%;
+ position:relative; */
+}
+
+
+@media (min-width: 400px) {
+  .resumeContainer {
+    width: 400px;
+  }
+.resumeHeader{
+  align-items:first baseline;
+}
+  .reMain{
+    display: flex;
+    flex-direction: column;
+  }
+  .resumeHeader .resumeLinks{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (min-width: 800px) {
+  .resumeContainer {
+    min-width: 700px;
+    max-width: 850px;
+  }
+  .resumeHeader .resumeLinks{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .resumeHeader{
+    align-items: center;
+  }
+  .reMain{
+  display: flex;
+  flex-direction: row;
+  }
+  .reCol1 {
+    display: flex;
+  flex-direction: column;
+  }
+  .reCol2 {
+    display: flex;
+  flex-direction: column;
+  }
 }
 
 .resumeHeader .resumeHeading {
   font-size: 2.7rem;
   font-weight: 500;
   text-transform: capitalize;
+  
 }
 
 .resumeHeader .resumeSubHeading {
   color: var(--color);
   font-weight: 500;
   font-size: 1.1rem;
+  
+ 
 }
 
 .resumeHeader .resumeLinks {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
-  row-gap: 10px;
+  row-gap: 8px;
   margin-top: 20px;
 }
 
@@ -59,6 +119,7 @@
   align-items: center;
   gap: 5px;
   cursor: pointer;
+  padding-bottom: 25px;
 }
 
 .resumeHeader .resumeLink svg {
@@ -70,6 +131,7 @@
 .reMain {
   display: flex;
   gap: 30px;
+  padding-top: 5%;
 }
 
 .reCol1 {
@@ -77,6 +139,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
 }
 
 .reCol2{
@@ -84,7 +147,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-
+  
 
   
 }
@@ -93,12 +156,13 @@
   width: 2px;
   background-color: #2c3e50;
   margin: 0 20px;
+ 
 }
 
 .reSection .reSectionTitle {
   font-size: 1.4rem;
   font-weight: bold;
-  width: 100%;
+  /* width: 90%; */
   border-bottom: 2px solid #000;
 }
 
@@ -168,7 +232,22 @@
   color: var(--color);
 }
 
-.reContent .rePoints, .numbered{
+/* .reContent .rePoints{
   padding-left: 18px;
   font-size: 0.875rem;
 }
+
+.numbered{
+  padding-left: 18px;
+  font-size: 0.875rem;
+} */
+
+.reContent .rePoints,.numbered{
+  padding-left: 18px;
+  font-size: 0.875rem;
+ 
+}
+.numbered li {
+  list-style-type: decimal;
+}
+

@@ -2,13 +2,15 @@ import React, {forwardRef, useEffect, useRef, useState } from 'react';
 import './Resume-module.css';
 import { AtSign, Calendar, GitHub, Linkedin, MapPin, Paperclip, Phone } from 'react-feather';
 
-// function Resume(props) {
+
 
 const Resume = forwardRef((props, ref) => {
+
     const information = props.information;
     const sections = props.sections;
     const activeColor = props.activeColor;
     const containerRef = useRef();
+
     const [column, setColumn] = useState([[], []]);
     const [source, setSource] = useState("");
     const [target, seTarget] = useState("");
@@ -76,7 +78,7 @@ const Resume = forwardRef((props, ref) => {
 
           {item.location ? (
             <p className='reDate'>
-              <MapPin /> Remote
+              <MapPin /> {item.location}
             </p>
           ) : (
             <span />
@@ -195,24 +197,30 @@ const Resume = forwardRef((props, ref) => {
     </div>
     ),
 
+    
+    
+  
+
     [sections.achievement]: (
-        <div key={'achievement'}
+      <div
+        key={"achievement"}
         draggable
         onDragOver={() => seTarget(info.achievement?.id)}
         onDragEnd={() => setSource(info.achievement?.id)}
         className='reSection ' 
         style = {{display: info.achievement?.sectionTitle ? "" : 'none' }}
-        >
-        <div className='reSectionTitle'> {info.achievement?.sectionTitle} </div>
+      >
+        <div className='reSectionTitle'>
+          {info.achievement?.sectionTitle}
+        </div>
         <div className='reContent'>
-        {info.achievement?.points?.length > 0 ? (
-        <ul className='numbered'>
-        {info.achievement?.points?.map((elem, index) => (
-
-            <li className='rePoint' key={elem + index}>
+          {info.achievement?.points?.length > 0 ? (
+            <ul className='numbered'>
+              {info.achievement?.points?.map((elem, index) => (
+                <li className='rePoint' key={elem + index}>
                   {elem}
                 </li>
-            ))}
+              ))}
             </ul>
           ) : (
             <span />
@@ -304,10 +312,9 @@ const Resume = forwardRef((props, ref) => {
 
   return (
   
-   <div ref={ref} className= 'outerResume' >
-   <div  ref={containerRef} className='resumeContainer'>
-
-     
+   <div ref={ref}  >
+   <div ref={containerRef} className='resumeContainer'>
+  
    <div className='resumeHeader'>
    <p className='resumeHeading'> {info.basicInfo?.detail?.name} </p>
    
@@ -360,15 +367,13 @@ const Resume = forwardRef((props, ref) => {
    <div className="cv-middle-border"></div>
    <div className='reCol2' > 
    {
-       column[1].map(item => sectionDiv[item])
+       column[1].map((item) => sectionDiv[item])
    }
    </div>
    </div>
-
-
    </div>
    </div>
   );
 });
 
-export default Resume
+export default Resume;

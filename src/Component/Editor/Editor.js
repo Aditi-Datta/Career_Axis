@@ -33,7 +33,7 @@ function Editor(props) {
       if (!Array.isArray(tempValues.points)) tempValues.points = [];
       tempValues.points[index] = value;
       setValues(tempValues);
-    }
+    };
 
     const workExpBody = (
       <div className='detail'>
@@ -317,6 +317,9 @@ function Editor(props) {
           }));
           break;
         }
+
+        
+
         case sections.achievement: {
           const tempPoints = values.points;
   
@@ -446,6 +449,8 @@ function Editor(props) {
       other: typeof activeInfo?.detail !== "object" ? activeInfo.detail : "",
     });
 
+    
+
     }, [activeItem]);
 
 
@@ -488,7 +493,9 @@ function Editor(props) {
         key={item}
         onClick={() => setActiveItem(item)}
 
-        style={{ color: activeItem === item ? '#791a80': '' , fontWeight: activeItem === item ? 'bolder': '' ,  borderBottom: activeItem === item ? '2px solid #791a80': ''   }}
+        style={{ color: activeItem === item ? '#b7e629': '' , fontWeight: activeItem === item ? 'bolder': '' ,  borderBottom: activeItem === item ? '2px solid #b7e629': ''   
+          
+        }}
      > 
     {sections[item]}
    
@@ -511,7 +518,8 @@ function Editor(props) {
         
         <div className='chip' 
         style={{  
-          backgroundColor: activeDetailIndex === index ? '#d2add4': ''  , 
+          backgroundColor: activeDetailIndex === index ? '#b7a81e': ''  , 
+        
         }}
         onClick={() => setActiveDetailIndex(index)}
         key={item.title+index} >

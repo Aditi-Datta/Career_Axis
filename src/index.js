@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import backgroundHeader from '../src/images/header.jpg';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App
+    style={{backgroundImage:`url(${backgroundHeader})` ,backgroundRepeat:"no-repeat" ,backgroundSize:"contain", width: '100vw', }}
+    ></App>
   </React.StrictMode>
 );
 

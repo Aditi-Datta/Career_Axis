@@ -5,9 +5,44 @@
     padding: 30px;
     align-items: center;
     padding-top: 0;
-    
+
+    color: rgb(236, 225, 225);
+    padding-top: 8%;
+}
+@media (min-width: 400px) {
+    .toolbar{
+        display: flex;
+        flex-direction: column;
+    }
+    .colors{
+        width: 80%;
+    }
+    .toolbar button  {
+        width: 40%;
+    }
 }
 
+@media (min-width: 650px) {
+    .colors{
+        width: 50%;
+    }
+    .toolbar button  {
+        width: 25%;
+    }
+}
+
+@media (min-width: 800px) {
+    .toolbar{
+        display: flex;
+        flex-direction: row;
+    }
+    .colors{
+        width: 84%;
+    }
+    .toolbar button  {
+        width: 16%;
+    }
+}
 .heading-body {
     font-weight: 500;
     font-size: 2.1rem;
@@ -37,7 +72,7 @@
 .toolbar button {
     padding:  8px 16px;
     border-radius: 5px;
-    background-color: rgb(128, 26, 132);
+    background-color: rgb(4, 21, 57);
     color: rgb(238, 232, 232);
     outline: none;
     border: none;

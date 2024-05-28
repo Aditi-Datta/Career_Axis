@@ -9,7 +9,8 @@ function Body() {
   const colors =['#7787DF', '#BE6DDB', '#B37595', '#6EC8B0','#C0C46F'];
 
 
-  const resumeRef = useRef();
+  
+
    const sections = {
     basicInfo: "Basic Info",
     workExp: "Work Experience",
@@ -21,7 +22,7 @@ function Body() {
   };
 
 
-  // const resumeRef = useRef();
+  const resumeRef = useRef();
 
 
   const [activeColor, setActiveColor] = useState(colors[0]);
@@ -97,7 +98,11 @@ function Body() {
     
     </div>
     <div className='editor-main'> 
-    <Editor sections={sections}  information = {resumeInformation} setInformation={setResumeInformation} ></Editor>
+    <Editor 
+    sections={sections}  
+    information = {resumeInformation} 
+    setInformation={setResumeInformation}
+    ></Editor>
 
     
     <Resume
